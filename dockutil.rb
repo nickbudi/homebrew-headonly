@@ -14,11 +14,10 @@ class Dockutil < Formula
   end
 
   def install
+    ENV.prepend_create_path 'PYTHONPATH', libexec+'lib/python2.7/site-packages'
     install_args = [ "setup.py", "install", "--prefix=#{libexec}" ]
 
-    python do
-      resource('plistlib').stage { system python, *install_args }
-    end
+    resource('plistlib').stage { system "python", *install_args }
 
     bin.install 'scripts/dockutil'
   end
