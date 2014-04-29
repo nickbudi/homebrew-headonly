@@ -2,9 +2,7 @@ require 'formula'
 
 class Dockutil < Formula
   homepage 'https://github.com/kcrawford/dockutil'
-  url 'https://github.com/kcrawford/dockutil/archive/4bbdbc95519b70ac00391c4ebe34592fd351f491.tar.gz'
-  sha1 'd74268ba749c4484bc33510193f62ef7b4d4b2da'
-  version '1.1.4'
+  head 'https://github.com/kcrawford/dockutil.git'
 
   depends_on :python
 
